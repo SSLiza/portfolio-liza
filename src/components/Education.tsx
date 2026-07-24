@@ -17,7 +17,7 @@ const educationTimelineData = [
   {
     years: "2019 – 2021",
     title: "Higher Secondary Certificate (HSC)",
-    company: "Scholarshome Major Tila, Sylhet",
+    company: "Shahjalal Jamia Islamia School and College, Sylhet",
     type: "Education",
     desc: "Completed higher secondary education in Science with a perfect GPA 5.00 / 5.00. Focus on Higher Mathematics, Physics, Chemistry, and Information Technology.",
     icon: "📜",
@@ -26,11 +26,11 @@ const educationTimelineData = [
   {
     years: "2017 – 2019",
     title: "Secondary School Certificate (SSC)",
-    company: "Sylhet Government Pilot High School",
+    company: "Jobed Ali Secondary School,Sylhet ",
     type: "Education",
-    desc: "Completed secondary school education with a perfect GPA 5.00 / 5.00 in Science group, building strong analytical and STEM foundations.",
+    desc: "Completed secondary school education with a GPA 4.83 in Science group, building strong analytical and STEM foundations.",
     icon: "🏆",
-    badge: "GPA 5.00 / 5.00",
+    badge: "GPA 4.83 / 5.00",
   },
 ];
 

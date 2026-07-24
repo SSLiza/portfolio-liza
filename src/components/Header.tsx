@@ -166,7 +166,7 @@ export default function Header() {
             {/* Resume Action Button & Mobile Toggle */}
             <div className="flex items-center gap-3">
               <motion.a
-                href="https://drive.google.com/file/d/1DuHQghlF_WenRx-t3m0R-qzDY-JYXjec/view?usp=drive_link"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -221,7 +221,7 @@ export default function Header() {
                   <a
                     onClick={() => setIsOpen(false)}
                     className="bg-emerald-500 text-zinc-950 text-center py-3 rounded-xl font-bold hover:bg-emerald-400 transition-colors flex items-center justify-center gap-2 mt-2 shadow-md"
-                    href="https://drive.google.com/file/d/1DuHQghlF_WenRx-t3m0R-qzDY-JYXjec/view?usp=drive_link"
+                    href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

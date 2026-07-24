@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const personalityCards = [
   {
@@ -18,9 +15,9 @@ const personalityCards = [
     desc: "Building full-stack web applications, crafting responsive user interfaces, developing backend APIs, and exploring AI-powered applications.",
   },
   {
-    icon: "🎨",
+    icon: "🪴",
     title: "Hobbies & Interests",
-    desc: "Outside of programming, I enjoy listening to music, watching movies, and spending time with family and friends.",
+    desc: "Outside of programming, I enjoy gardening, playing sports, and spending time with family and friends.",
   },
   {
     icon: "🧠",
@@ -30,40 +27,16 @@ const personalityCards = [
 ];
 
 export default function About() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const ctx = gsap.context(() => {
-      gsap.from(".about-reveal", {
-        opacity: 0,
-        y: 35,
-        stagger: 0.15,
-        duration: 0.9,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".about-trigger",
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
-      ref={containerRef}
-      className="scroll-mt-24 py-12 sm:py-16 bg-zinc-950 relative overflow-hidden border-t border-brand-border/40"
+      className="scroll-mt-24 py-10 sm:py-12 bg-zinc-950 relative overflow-hidden border-t border-zinc-800/80"
       id="about"
     >
-      <div className="container mx-auto px-6 max-w-7xl about-trigger">
-        <div className="grid md:grid-cols-12 gap-12 items-center max-w-7xl mx-auto mb-16">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="grid md:grid-cols-12 gap-12 items-center max-w-7xl mx-auto mb-8">
           {/* Left Column: Image with Subtle Glow */}
-          <div className="about-reveal md:col-span-5 relative w-full max-w-[420px] justify-self-center">
-            <div className="relative overflow-hidden rounded-[2.5rem] border border-brand-border/60 bg-zinc-900 shadow-xl">
+          <div className="md:col-span-5 relative w-full max-w-[420px] justify-self-center">
+            <div className="relative overflow-hidden rounded-[2.5rem] border border-zinc-800 bg-zinc-900 shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop"
                 alt="About Shajeda Sultana - Developer Workspace"
@@ -75,7 +48,7 @@ export default function About() {
           </div>
 
           {/* Right Column: Main Story */}
-          <div className="about-reveal md:col-span-7 flex flex-col space-y-6">
+          <div className="md:col-span-7 flex flex-col space-y-6">
             <div>
               <span className="text-emerald-400 font-sans font-semibold tracking-wider text-xs uppercase block mb-1">
                 GET TO KNOW ME
@@ -89,7 +62,7 @@ export default function About() {
               I am a passionate <strong className="text-white font-semibold">Frontend Developer</strong> and Computer Science undergraduate at <strong className="text-emerald-400 font-semibold">Sylhet Engineering College</strong>. My coding journey started with deep curiosity about how computer software operates behind the scenes, leading me to master core Data Structures in C++ before diving into full-stack web engineering.
             </p>
 
-            <p className="text-gray-400 leading-relaxed text-sm font-sans font-normal">
+            <p className="text-gray-300 leading-relaxed text-sm font-sans font-normal">
               I thrive on turning complex problems into intuitive, high-performance web applications using modern technologies like Next.js App Router, React 19, Express.js, MongoDB, and Tailwind CSS.
             </p>
 
@@ -124,12 +97,12 @@ export default function About() {
         </div>
 
         {/* Detailed Personality, Journey & Hobbies Cards */}
-        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+        <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
           {personalityCards.map((card, idx) => (
             <motion.div
               key={idx}
               whileHover={{ y: -6 }}
-              className="about-reveal bg-zinc-900/60 backdrop-blur-sm p-6 rounded-2xl border border-zinc-800/80 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between"
+              className="bg-zinc-900/80 backdrop-blur-sm p-6 rounded-2xl border border-zinc-800 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xl mb-4">
@@ -138,7 +111,7 @@ export default function About() {
                 <h3 className="text-lg font-bold text-white mb-2 font-sans">
                   {card.title}
                 </h3>
-                <p className="text-xs text-gray-400 leading-relaxed font-sans font-normal">
+                <p className="text-xs text-gray-300 leading-relaxed font-sans font-normal">
                   {card.desc}
                 </p>
               </div>

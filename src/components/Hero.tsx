@@ -134,7 +134,7 @@ export default function Hero() {
           <div className="hero-cta flex flex-wrap gap-4 pt-2 items-center">
             {/* Download Resume Button */}
             <motion.a
-              href="https://drive.google.com/file/d/1DuHQghlF_WenRx-t3m0R-qzDY-JYXjec/view?usp=drive_link"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
@@ -164,7 +164,7 @@ export default function Hero() {
             
             {/* GitHub */}
             <a
-              href="https://github.com"
+              href="https://github.com/SSLiza"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
@@ -178,7 +178,7 @@ export default function Hero() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ssliza59"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
@@ -190,23 +190,9 @@ export default function Hero() {
               </svg>
             </a>
 
-            {/* Twitter/X */}
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter / X Profile"
-              className="w-9 h-9 rounded-xl bg-zinc-900 border border-zinc-700/80 hover:border-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-400 text-gray-300 flex items-center justify-center transition-all duration-300 shadow-sm"
-              title="Twitter / X Profile"
-            >
-              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            </a>
-
             {/* Facebook */}
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/shajeda.liza.5"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook Profile"

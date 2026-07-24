@@ -10,13 +10,13 @@ import { ExternalLink, Code, Server } from "lucide-react";
 interface ProjectItem {
   id: string;
   title: string;
-  category: string;
+  category: "Full Stack" | "Frontend";
   img: string;
   desc: string;
   tech: string[];
   live: string;
   clientGithub: string;
-  serverGithub: string;
+  serverGithub?: string;
   features: string[];
   challenges: string[];
   futurePlans: string[];
@@ -24,28 +24,76 @@ interface ProjectItem {
 
 const projectsData: ProjectItem[] = [
   {
-    id: "ai-verse",
-    title: "AIverse — AI Prompt Sharing & Marketplace Platform",
+    id: "botaniq",
+    title: "Botaniq — Botanical & Plant Care Platform",
     category: "Full Stack",
-    img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80",
-    desc: "A full-stack e-commerce marketplace platform for buying, sharing, and selling optimized AI prompts for ChatGPT, Midjourney, and Stable Diffusion.",
-    tech: ["Next.js", "JavaScript", "Tailwind CSS", "Hero UI", "BetterAuth", "Express.js", "MongoDB", "Stripe API"],
-    live: "https://aiverse.vercel.app",
-    clientGithub: "https://github.com",
-    serverGithub: "https://github.com",
+    img: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?auto=format&fit=crop&w=1000&q=80",
+    desc: "A full-stack botanical e-commerce & plant care management platform featuring plant discovery, user reviews, order management, and secure authentication.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Hero UI", "BetterAuth", "Express.js", "MongoDB"],
+    live: "https://botaniq-client.vercel.app",
+    clientGithub: "https://github.com/SSLiza/botaniq-client",
     features: [
-      "Role-Based Dashboard (User, Creator & Admin)",
-      "Stripe Premium Subscription System",
-      "AI Prompt Marketplace with Search, Filter & Sorting",
-      "Theme Toggle (Dark / Light presets)",
+      "Botanical plant care catalog & category filtering",
+      "Secure user authentication with role-based access",
+      "Full CRUD-based plant ordering & user review system",
+      "Responsive, mobile-first UI with smooth micro-interactions",
     ],
     challenges: [
-      "Securing prompt buyer validation & role-based authorization using BetterAuth.",
-      "Optimizing prompt query caching and instant search filters for fast performance.",
+      "Optimizing query search filters across multi-category plant catalogs.",
+      "Securing user authentication and cart state synchronization across page refreshes.",
     ],
     futurePlans: [
-      "Integrating real-time AI prompt testing sandbox.",
-      "Adding multi-currency payment checkout options.",
+      "Integrating AI-powered plant species identification camera scanner.",
+      "Adding automated plant watering reminder notifications.",
+    ],
+  },
+  {
+    id: "book-point",
+    title: "BookPoint — Online Book Sharing & Reading Platform",
+    category: "Full Stack",
+    img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1000&q=80",
+    desc: "A full-stack online book discovery, rating, and exchange platform featuring searchable library catalogs, user bookshelves, and secure authentication.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Hero UI", "BetterAuth", "Express.js", "MongoDB"],
+    live: "https://bookpoint-client-lac.vercel.app",
+    clientGithub: "https://github.com/SSLiza/bookpoint-client",
+    features: [
+      "Searchable online library catalog with genre & price filters",
+      "User bookshelf management (Want to read, Currently reading, Finished)",
+      "Secure JWT & BetterAuth authentication with protected user routes",
+      "Full CRUD book review & rating system",
+    ],
+    challenges: [
+      "Managing dynamic book review list mutations without full page reloads.",
+      "Optimizing MongoDB database indexing for fast keyword search across book titles.",
+    ],
+    futurePlans: [
+      "Adding PDF book preview reader integration.",
+      "Supporting user-to-user book swap exchange requests.",
+    ],
+  },
+  {
+    id: "keen-keeper",
+    title: "KeenKeeper — Keep Your Friendships Alive",
+    category: "Frontend",
+    img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80",
+    desc: "A modern friendship management web app that helps users track and maintain meaningful relationships, monitor interactions, set communication goals, and stay connected with friends.",
+    tech: ["Next.js", "Tailwind CSS", "Recharts", "React Icons", "App Router", "Local Storage"],
+    live: "https://a7-keen-keeper-tau.vercel.app",
+    clientGithub: "https://github.com/SSLiza/a7-keen-keeper",
+    features: [
+      "Friend Management: Responsive card layout with profile, tags, status, and interaction details",
+      "Quick Check-In System: Log interactions (Call 📞, Text 💬, Video 🎥) into Timeline with toast notifications",
+      "Timeline Tracking: Date-stamped interaction history with filter options by interaction type",
+      "Analytics Dashboard: Recharts Pie Chart visualizing total Calls, Texts, and Video interactions",
+    ],
+    challenges: [
+      "Managing dynamic friendship interaction timelines & local storage synchronization.",
+      "Building responsive Recharts analytics pie charts optimized for mobile viewports.",
+    ],
+    futurePlans: [
+      "Timeline entry search & date sorting (newest / oldest)",
+      "Full backend database integration (MongoDB & Express API)",
+      "Customizable dark mode theme support",
     ],
   },
   {
@@ -54,10 +102,9 @@ const projectsData: ProjectItem[] = [
     category: "Full Stack",
     img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=80",
     desc: "A mobile-first sports facility booking platform enabling users to browse, export, and reserve sports arenas with role-based access control.",
-    tech: ["Next.js", "JavaScript", "Tailwind CSS", "Hero UI", "BetterAuth", "Express.js", "MongoDB"],
-    live: "https://sportnest.vercel.app",
-    clientGithub: "https://github.com",
-    serverGithub: "https://github.com",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Hero UI", "BetterAuth", "Express.js", "MongoDB"],
+    live: "https://sport-nest-client-zeta.vercel.app",
+    clientGithub: "https://github.com/SSLiza/sport-nest-client",
     features: [
       "Responsive, mobile-first UI for browsing and exporting sports facilities",
       "Secure user authentication with login/logout and role-based access control",
@@ -79,9 +126,8 @@ const projectsData: ProjectItem[] = [
     img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
     desc: "A modern tile showcase platform featuring searchable product galleries, detailed material specs, Google OAuth authentication, and animated product arrival marquees.",
     tech: ["Next.js", "JavaScript", "Tailwind CSS", "Hero UI", "MongoDB", "BetterAuth", "React Icons", "Animate.css"],
-    live: "https://tilesgallery.vercel.app",
-    clientGithub: "https://github.com",
-    serverGithub: "https://github.com",
+    live: "https://tiles-gallery-six.vercel.app",
+    clientGithub: "https://github.com/SSLiza/tiles-gallery",
     features: [
       "Modern home page with hero banner, CTA, and animated marquee for new arrivals",
       "Searchable tile gallery with responsive card layouts and detailed product pages displaying pricing, materials, dimensions, styles, and tags",
@@ -96,9 +142,33 @@ const projectsData: ProjectItem[] = [
       "Supporting bulk quote export and customer inquiry tracking.",
     ],
   },
+  {
+    id: "ai-verse",
+    title: "AIverse — AI Prompt Sharing & Marketplace Platform",
+    category: "Full Stack",
+    img: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1000&q=80",
+    desc: "A full-stack e-commerce marketplace platform for buying, sharing, and selling optimized AI prompts for ChatGPT, Midjourney, and Stable Diffusion.",
+    tech: ["Next.js", "JavaScript", "Tailwind CSS", "Hero UI", "BetterAuth", "Express.js", "MongoDB", "Stripe API"],
+    live: "https://aiverse-client-six.vercel.app",
+    clientGithub: "https://github.com/SSLiza/aiverse-client",
+    features: [
+      "Role-Based Dashboard (User, Creator & Admin)",
+      "Stripe Premium Subscription System",
+      "AI Prompt Marketplace with Search, Filter & Sorting",
+      "Theme Toggle (Dark / Light presets)",
+    ],
+    challenges: [
+      "Securing prompt buyer validation & role-based authorization using BetterAuth.",
+      "Optimizing prompt query caching and instant search filters for fast performance.",
+    ],
+    futurePlans: [
+      "Integrating real-time AI prompt testing sandbox.",
+      "Adding multi-currency payment checkout options.",
+    ],
+  },
 ];
 
-const categoryTabs = ["All", "Full Stack"] as const;
+const categoryTabs = ["All", "Full Stack", "Frontend"] as const;
 
 export default function Projects() {
   const [activeTab, setActiveTab] = useState<typeof categoryTabs[number]>("All");
@@ -125,6 +195,21 @@ export default function Projects() {
     return () => ctx.revert();
   }, []);
 
+  // Solution 1: Prevent background scrolling when modal is open
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedProject]);
+
+
+
   const filteredProjects =
     activeTab === "All"
       ? projectsData
@@ -147,7 +232,7 @@ export default function Projects() {
               Featured Web Applications
             </h2>
             <p className="text-gray-400 text-sm font-sans font-normal">
-              Featured full-stack web applications built with Next.js, Express.js, MongoDB, BetterAuth, and Tailwind CSS.
+              Featured full-stack &amp; frontend web applications built with Next.js, Express.js, MongoDB, BetterAuth, and Tailwind CSS.
             </p>
           </div>
 
@@ -250,23 +335,20 @@ export default function Projects() {
       {/* 2-Column One-Page Interactive Modal */}
       <AnimatePresence>
         {selectedProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md">
             {/* Dark Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+            <div
               onClick={() => setSelectedProject(null)}
-              className="fixed inset-0 bg-black/85 backdrop-blur-md"
-            ></motion.div>
+              className="absolute inset-0"
+            />
 
-            {/* 2-Column Modal Card */}
+            {/* 2-Column Modal Card with Scrollable Body */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: 0 }}
               transition={{ type: "spring", duration: 0.4 }}
-              className="relative w-full max-w-4xl bg-zinc-950 border border-zinc-800 rounded-3xl shadow-2xl overflow-hidden z-10 p-6 sm:p-8 max-h-[92vh] overflow-y-auto my-auto"
+              className="relative w-[95%] max-w-6xl max-h-[92vh] overflow-y-auto bg-zinc-950 border border-zinc-800 rounded-3xl shadow-2xl z-10 p-6 sm:p-8 md:p-10 my-auto"
             >
               {/* Close Button */}
               <button
@@ -322,22 +404,24 @@ export default function Projects() {
                       className="w-full bg-zinc-900 hover:bg-zinc-800 text-gray-200 border border-zinc-800 font-semibold px-4 py-2 rounded-xl text-xs flex items-center justify-center gap-2 transition-all"
                     >
                       <Code className="w-4 h-4 text-emerald-400" />
-                      <span>Client Code</span>
+                      <span>GitHub Repository (Client)</span>
                     </a>
-                    <a
-                      href={selectedProject.serverGithub}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-zinc-900 hover:bg-zinc-800 text-gray-200 border border-zinc-800 font-semibold px-4 py-2 rounded-xl text-xs flex items-center justify-center gap-2 transition-all"
-                    >
-                      <Server className="w-4 h-4 text-emerald-400" />
-                      <span>Server Code</span>
-                    </a>
+                    {selectedProject.serverGithub && (
+                      <a
+                        href={selectedProject.serverGithub}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full bg-zinc-900 hover:bg-zinc-800 text-gray-200 border border-zinc-800 font-semibold px-4 py-2 rounded-xl text-xs flex items-center justify-center gap-2 transition-all"
+                      >
+                        <Server className="w-4 h-4 text-emerald-400" />
+                        <span>Server Code</span>
+                      </a>
+                    )}
                   </div>
                 </div>
 
                 {/* Right Column: Overview, Key Features, Tech Stack, Challenges & Future Plans */}
-                <div className="md:col-span-7 flex flex-col space-y-4 text-xs font-sans">
+                <div className="md:col-span-7 flex flex-col space-y-4 text-xs font-sans pb-6">
                   
                   {/* Overview */}
                   <div>
@@ -389,6 +473,20 @@ export default function Projects() {
                       {selectedProject.challenges.map((c, i) => (
                         <li key={i} className="leading-relaxed">
                           {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Potential Improvements & Future Plans */}
+                  <div className="bg-zinc-900/60 p-4 rounded-xl border border-zinc-800/80">
+                    <h4 className="text-xs font-sans font-semibold text-emerald-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                      <span>🚀</span> Potential Improvements &amp; Future Plans
+                    </h4>
+                    <ul className="space-y-1.5 text-gray-300 text-xs font-sans list-disc list-inside">
+                      {selectedProject.futurePlans.map((fp, i) => (
+                        <li key={i} className="leading-relaxed">
+                          {fp}
                         </li>
                       ))}
                     </ul>

@@ -30,7 +30,7 @@ export default function Footer() {
             <div className="flex flex-wrap gap-3">
               <a
                 className="w-10 h-10 rounded-xl bg-zinc-900 border border-brand-border/60 flex items-center justify-center hover:bg-emerald-500/20 hover:border-emerald-400 text-gray-400 hover:text-emerald-400 transition-all duration-300"
-                href="https://github.com"
+                href="https://github.com/SSLiza"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -42,7 +42,7 @@ export default function Footer() {
               </a>
               <a
                 className="w-10 h-10 rounded-xl bg-zinc-900 border border-brand-border/60 flex items-center justify-center hover:bg-emerald-500/20 hover:border-emerald-400 text-gray-400 hover:text-emerald-400 transition-all duration-300"
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/ssliza59"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -54,7 +54,7 @@ export default function Footer() {
               </a>
               <a
                 className="w-10 h-10 rounded-xl bg-zinc-900 border border-brand-border/60 flex items-center justify-center hover:bg-emerald-500/20 hover:border-emerald-400 text-gray-400 hover:text-emerald-400 transition-all duration-300"
-                href="https://codeforces.com"
+                href="https://codeforces.com/profile/_S_S_LIZA"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Codeforces"
@@ -64,19 +64,7 @@ export default function Footer() {
               </a>
               <a
                 className="w-10 h-10 rounded-xl bg-zinc-900 border border-brand-border/60 flex items-center justify-center hover:bg-emerald-500/20 hover:border-emerald-400 text-gray-400 hover:text-emerald-400 transition-all duration-300"
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter / X"
-                title="Twitter / X Profile"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-              <a
-                className="w-10 h-10 rounded-xl bg-zinc-900 border border-brand-border/60 flex items-center justify-center hover:bg-emerald-500/20 hover:border-emerald-400 text-gray-400 hover:text-emerald-400 transition-all duration-300"
-                href="https://facebook.com"
+                href="https://www.facebook.com/shajeda.liza.5"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
