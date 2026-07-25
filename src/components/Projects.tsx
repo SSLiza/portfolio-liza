@@ -102,7 +102,7 @@ const projectsData: ProjectItem[] = [
     category: "Full Stack",
     img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=80",
     desc: "A mobile-first sports facility booking platform enabling users to browse, export, and reserve sports arenas with role-based access control.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Hero UI", "BetterAuth", "Express.js", "MongoDB"],
+    tech: ["Next.js", "JavaScript", "Tailwind CSS", "Hero UI", "BetterAuth", "Express.js", "MongoDB"],
     live: "https://sport-nest-client-zeta.vercel.app",
     clientGithub: "https://github.com/SSLiza/sport-nest-client",
     features: [
